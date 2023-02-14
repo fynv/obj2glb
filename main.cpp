@@ -154,9 +154,10 @@ int main(int argc, char* argv[])
 		}
 
 		{
-			std::string filename = materials[i].normal_texname;
+			std::string filename = materials[i].bump_texname;
+			//std::string filename = materials[i].normal_texname;
 			if (filename != "")
-			{
+			{				
 				char fn_tex[1024];
 				_splitpath(filename.c_str(), nullptr, nullptr, fn_tex, nullptr);
 				int idx_tex = (int)textures_in.size();
